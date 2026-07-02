@@ -1,0 +1,152 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+/* Navbar */
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Hero */
+
+.hero{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar */
+
+.list-group-item{
+    border: none;
+    margin-bottom: 8px;
+    border-radius: 8px !important;
+    transition: 0.3s;
+}
+
+.list-group-item:hover{
+    background: #0d6efd;
+    color: white;
+}
+
+.list-group-item.active{
+    background: #0d6efd !important;
+    border-color: #0d6efd;
+}
+
+/* Chat */
+
+#chat-box{
+    height: 72vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background: white;
+}
+
+/* User Message */
+
+.user-message{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.user-message div{
+    max-width: 70%;
+    background: #0d6efd;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 15px 15px 0 15px;
+}
+
+/* AI Message */
+
+.ai-message{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.ai-message div{
+    max-width: 70%;
+    background: #ececec;
+    color: #333;
+    padding: 12px 18px;
+    border-radius: 15px 15px 15px 0;
+}
+
+/* Input */
+
+.input-group input{
+    height: 55px;
+    border-radius: 10px 0 0 10px;
+}
+
+.input-group button{
+    width: 120px;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Cards */
+
+.card{
+    border-radius: 15px;
+}
+
+/* Buttons */
+
+.btn{
+    border-radius: 10px;
+}
+
+/* Footer */
+
+footer{
+    margin-top: auto;
+}
+
+/* Scrollbar */
+
+#chat-box::-webkit-scrollbar{
+    width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb{
+    background: #bdbdbd;
+    border-radius: 10px;
+}
+
+#chat-box::-webkit-scrollbar-thumb:hover{
+    background: #888;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .row{
+        height: auto !important;
+    }
+
+    #chat-box{
+        height: 60vh;
+    }
+
+    .user-message div,
+    .ai-message div{
+        max-width: 90%;
+    }
+
+}

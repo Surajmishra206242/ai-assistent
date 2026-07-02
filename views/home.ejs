@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <%- include("partials/navbar") %>
+
+    <!-- Hero Section -->
+    <section class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h1 class="display-4 fw-bold mb-3">
+                    🤖 AI Chat Assistant
+                </h1>
+
+                <p class="lead text-muted">
+                    Ask questions, get instant AI-powered answers, save your chat history,
+                    and continue conversations anytime.
+                </p>
+
+                <% if(user){ %>
+
+                    <a href="/chat" class="btn btn-primary btn-lg mt-3">
+                        Go to Chat
+                    </a>
+
+                <% } else { %>
+
+                    <a href="/register" class="btn btn-primary btn-lg mt-3 me-2">
+                        Get Started
+                    </a>
+
+                    <a href="/login" class="btn btn-outline-dark btn-lg mt-3">
+                        Login
+                    </a>
+
+                <% } %>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="/images/robot.png"
+                    class="img-fluid"
+                    alt="AI Assistant"
+                    style="max-height:420px;">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section class="container py-5">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h3>💬</h3>
+
+                        <h5>AI Chat</h5>
+
+                        <p class="text-muted">
+                            Ask anything and receive intelligent AI responses instantly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h3>📚</h3>
+
+                        <h5>Chat History</h5>
+
+                        <p class="text-muted">
+                            Every conversation is securely saved to your account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card shadow-sm h-100">
+
+                    <div class="card-body text-center">
+
+                        <h3>⚡</h3>
+
+                        <h5>Fast Responses</h5>
+
+                        <p class="text-muted">
+                            Powered by OpenRouter AI for quick and accurate answers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <%- include("partials/footer") %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="/js/gsap.js"></script>
+
+</body>
+
+</html>
