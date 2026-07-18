@@ -1,0 +1,225 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* Layout */
+.sidebar-card,
+.chat-card{
+    background:rgba(30,41,59,.9);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    backdrop-filter:blur(12px);
+}
+
+.sidebar-card{
+    height:85vh;
+}
+
+.chat-card{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* Sidebar */
+
+.list-group{
+    overflow-y:auto;
+}
+
+.list-group-item{
+    background:transparent;
+    border:none;
+    color:#cbd5e1;
+    border-radius:10px !important;
+    margin-bottom:8px;
+    transition:.3s;
+}
+
+.list-group-item:hover{
+    background:#1d4ed8;
+    color:#fff;
+}
+
+.list-group-item.active{
+    background:#2563eb !important;
+    color:#fff;
+}
+
+/* Chat */
+
+.chat-box{
+    flex:1;
+    overflow-y:auto;
+    padding:25px;
+}
+
+.chat-box::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:20px;
+}
+
+/* Welcome */
+
+.welcome{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#94a3b8;
+}
+
+/* Messages */
+
+.user-message,
+.ai-message{
+    display:flex;
+    margin-bottom:18px;
+}
+
+.user-message{
+    justify-content:flex-end;
+}
+
+.ai-message{
+    justify-content:flex-start;
+}
+
+.message-content{
+    max-width:75%;
+    padding:14px 18px;
+    border-radius:16px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+.user-message .message-content{
+    background:#2563eb;
+    color:#fff;
+    border-bottom-right-radius:5px;
+}
+
+.ai-message .message-content{
+    background:#334155;
+    color:#fff;
+    border-bottom-left-radius:5px;
+}
+
+/* Markdown */
+
+.markdown-body,
+.markdown-body *{
+    color:#fff;
+}
+
+.markdown-body pre{
+    background:#111827;
+    padding:14px;
+    border-radius:10px;
+    overflow:auto;
+    margin:10px 0;
+}
+
+.markdown-body code{
+    background:#1e293b;
+    padding:2px 6px;
+    border-radius:5px;
+}
+
+/* Input */
+
+.chat-input{
+    padding:18px;
+    border-top:1px solid rgba(255,255,255,.08);
+    background:#111827;
+}
+
+.chat-input form{
+    width:100%;
+}
+
+.chat-input .input-group{
+    display:flex;
+}
+
+.chat-input .form-control{
+    background:#1e293b;
+    color:#fff;
+    border:1px solid #334155;
+    height:52px;
+}
+
+.chat-input .form-control::placeholder{
+    color:#94a3b8;
+}
+
+.chat-input .form-control:focus{
+    background:#1e293b;
+    color:#fff;
+    border-color:#2563eb;
+    box-shadow:none;
+}
+
+.chat-input .btn{
+    width:120px;
+}
+
+/* Buttons */
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .sidebar-card{
+        height:auto;
+    }
+
+    .chat-card{
+        height:75vh;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .chat-card{
+        height:70vh;
+    }
+
+    .message-content{
+        max-width:90%;
+    }
+
+    .chat-input .btn{
+        width:90px;
+    }
+
+}
